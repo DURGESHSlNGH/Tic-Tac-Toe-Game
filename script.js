@@ -36,7 +36,6 @@ boxes.forEach((box) => {
             turnO = true;
         }
         clickedBtn++;
-        console.log("button is clicked.");
         box.disabled = true;
 
         checkWinner();
@@ -70,6 +69,7 @@ const checkWinner = () => {
 
         if (pos1 !== "" && pos2 !== "" && pos3 !== "") {
             if (pos1 === pos2 && pos2 === pos3) {
+                clickedBtn = 0;
                 boxes[win[0]].style.color = "green";
                 boxes[win[1]].style.color = "green";
                 boxes[win[2]].style.color = "green";
